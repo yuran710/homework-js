@@ -20,10 +20,14 @@ console.log(users);
 
 //Задание 2
 function getUserAverageAge(users) {
-  const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+  let totalAge = 0;
+  
+  users.forEach(user => {
+    totalAge += user.age;
+  });
+  
   return totalAge / users.length;
 }
-
 console.log(getUserAverageAge(users));
 
 //Задание 3
