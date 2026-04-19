@@ -32,9 +32,14 @@ console.log(getUserAverageAge(users));
 
 //Задание 3
 function getAllAdmins(users) {
-  return users.filter((user) => user.isAdmin === true);
+  const admins = [];
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].isAdmin === true) {
+      admins.push(users[i]);
+    }
+  }
+  return admins;
 }
-
 console.log(getAllAdmins(users));
 
 //Задание 4
